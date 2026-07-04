@@ -230,6 +230,7 @@ $packagePrefixes = 'AppUp.IntelManagementandSecurityStatus',
 'Microsoft.StartExperiencesApp',
 'Microsoft.Todos',
 'Microsoft.Wallet',
+'Microsoft.WidgetsPlatformRuntime',
 'Microsoft.Windows.DevHome',
 'Microsoft.Windows.Copilot',
 'Microsoft.Windows.Teams',
@@ -251,6 +252,7 @@ $packagePrefixes = 'AppUp.IntelManagementandSecurityStatus',
 'Microsoft.ZuneVideo',
 'MicrosoftCorporationII.MicrosoftFamily',
 'MicrosoftCorporationII.QuickAssist',
+'MicrosoftWindows.Client.WebExperience',
 'MSTeams',
 'MicrosoftTeams', 
 'Microsoft.WindowsTerminal',
@@ -335,6 +337,8 @@ Remove-RegistryValue "HKEY_LOCAL_MACHINE\zSOFTWARE\WOW6432Node\Microsoft\Windows
 Remove-RegistryValue "HKEY_LOCAL_MACHINE\zSOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Microsoft Edge Update"
 Write-Output "Disabling OneDrive folder backup"
 Set-RegistryValue "HKLM\zSOFTWARE\Policies\Microsoft\Windows\OneDrive" "DisableFileSyncNGSC" "REG_DWORD" "1"
+Write-Output "Disabling Widgets / News and Interests:"
+Set-RegistryValue 'HKLM\zSOFTWARE\Policies\Microsoft\Dsh' 'AllowNewsAndInterests' 'REG_DWORD' '0'
 Write-Output "Disabling Telemetry:"
 Set-RegistryValue 'HKLM\zNTUSER\Software\Microsoft\Windows\CurrentVersion\AdvertisingInfo' 'Enabled' 'REG_DWORD' '0'
 Set-RegistryValue 'HKLM\zNTUSER\Software\Microsoft\Windows\CurrentVersion\Privacy' 'TailoredExperiencesWithDiagnosticDataEnabled' 'REG_DWORD' '0'
@@ -532,4 +536,3 @@ if (Test-Path -Path "$PSScriptRoot\autounattend.xml") {
 Stop-Transcript
 
 exit
-
