@@ -407,6 +407,8 @@ Write-Host "Disabling Telemetry:"
 & 'reg' 'add' 'HKLM\zSOFTWARE\Policies\Microsoft\Windows\DataCollection' '/v' 'AllowTelemetry' '/t' 'REG_DWORD' '/d' '0' '/f' | Out-Null
 & 'reg' 'add' 'HKLM\zSYSTEM\ControlSet001\Services\dmwappushservice' '/v' 'Start' '/t' 'REG_DWORD' '/d' '4' '/f' | Out-Null
 & 'reg' 'add' 'HKLM\zSYSTEM\CurrentControlSet\Services\DiagTrack' '/v' 'Start' '/t' 'REG_DWORD' '/d' '4' '/f' | Out-Null
+& 'reg' 'add' 'HKLM\zSYSTEM\CurrentControlSet\Services\WerSvc' '/v' 'Start' '/t' 'REG_DWORD' '/d' '4' '/f' | Out-Null
+& 'reg' 'add' 'HKLM\zNTUSER\Software\Policies\Microsoft\Windows\Windows Error Reporting' '/v' 'Disabled' '/t' 'REG_DWORD' '/d' '1' '/f' | Out-Null
 Write-Host "Prevents installation or DevHome and Outlook:"
 & 'reg' 'add' 'HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Orchestrator\UScheduler\OutlookUpdate' '/v' 'workCompleted' '/t' 'REG_DWORD' '/d' '1' '/f' | Out-Null
 & 'reg' 'add' 'HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Orchestrator\UScheduler\DevHomeUpdate' '/v' 'workCompleted' '/t' 'REG_DWORD' '/d' '1' '/f' | Out-Null
@@ -448,6 +450,7 @@ Write-Host "Disabling Copilot and AI Features"
 & 'reg' 'add' 'HKLM\zSOFTWARE\Policies\Microsoft\Edge' '/v' 'DevToolsGenAiSettings' '/t' 'REG_DWORD' '/d' '2' '/f' | Out-Null
 & 'reg' 'add' 'HKLM\zSOFTWARE\Policies\Microsoft\Edge' '/v' 'ShareBrowsingHistoryWithCopilotSearchAllowed' '/t' 'REG_DWORD' '/d' '0' '/f' | Out-Null
 & 'reg' 'add' 'HKLM\zSOFTWARE\Policies\Microsoft\Windows\Explorer' '/v' 'DisableSearchBoxSuggestions' '/t' 'REG_DWORD' '/d' '1' '/f' | Out-Null
+& 'reg' 'add' 'HKLM\zSYSTEM\ControlSet001\Services\WSAIFabricSvc' '/v' 'Start' '/t' 'REG_DWORD' '/d' '4' '/f' | Out-Null
 Write-Host "Prevents installation of Teams:"
 & 'reg' 'add' 'HKLM\zSOFTWARE\Policies\Microsoft\Teams' '/v' 'DisableInstallation' '/t' 'REG_DWORD' '/d' '1' '/f' | Out-Null
 Write-Host "Prevent installation of New Outlook":
