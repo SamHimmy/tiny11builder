@@ -436,6 +436,7 @@ Write-Host "Disabling Copilot and AI Features"
 & 'reg' 'add' 'HKLM\zSOFTWARE\Policies\Microsoft\Paint' '/v' 'DisableGenerativeFill' '/t' 'REG_DWORD' '/d' '1' '/f' | Out-Null
 & 'reg' 'add' 'HKLM\zSOFTWARE\Policies\Microsoft\Paint' '/v' 'DisableGenerativeErase' '/t' 'REG_DWORD' '/d' '1' '/f' | Out-Null
 & 'reg' 'add' 'HKLM\zSOFTWARE\Policies\Microsoft\Paint' '/v' 'DisableRemoveBackground' '/t' 'REG_DWORD' '/d' '1' '/f' | Out-Null
+& 'reg' 'add' 'HKLM\zSOFTWARE\Policies\WindowsNotepad' '/v' 'DisableAIFeatures' '/t' 'REG_DWORD' '/d' '1' '/f' | Out-Null
 & 'reg' 'add' 'HKLM\zSOFTWARE\Policies\Microsoft\Windows\CloudContent' '/v' 'DisableConsumerAccountStateContent' '/t' 'REG_DWORD' '/d' '1' '/f' | Out-Null
 & 'reg' 'add' 'HKLM\zSOFTWARE\Policies\Microsoft\Edge' '/v' 'CopilotCDPPageContext' '/t' 'REG_DWORD' '/d' '0' '/f' | Out-Null
 & 'reg' 'add' 'HKLM\zSOFTWARE\Policies\Microsoft\Edge' '/v' 'CopilotPageContext' '/t' 'REG_DWORD' '/d' '0' '/f' | Out-Null
