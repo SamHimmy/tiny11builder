@@ -32,7 +32,6 @@
                 <HideOnlineAccountScreens>true</HideOnlineAccountScreens>
                 <HideWirelessSetupInOOBE>true</HideWirelessSetupInOOBE>
                 <HideOEMRegistrationScreen>true</HideOEMRegistrationScreen>
-                <HideLocalAccountScreen>true</HideLocalAccountScreen>
                 <ProtectYourPC>3</ProtectYourPC>
             </OOBE>
             <ConfigureChatAutoInstall>false</ConfigureChatAutoInstall>
