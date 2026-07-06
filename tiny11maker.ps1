@@ -351,6 +351,8 @@ Set-RegistryValue 'HKLM\zNTUSER\Software\Microsoft\Personalization\Settings' 'Ac
 Set-RegistryValue 'HKLM\zSOFTWARE\Policies\Microsoft\Windows\DataCollection' 'AllowTelemetry' 'REG_DWORD' '0'
 Set-RegistryValue 'HKLM\zSYSTEM\ControlSet001\Services\dmwappushservice' 'Start' 'REG_DWORD' '4'
 Set-RegistryValue 'HKLM\zSYSTEM\CurrentControlSet\Services\DiagTrack' 'Start' 'REG_DWORD' '4'
+Set-RegistryValue 'HKLM\zSYSTEM\CurrentControlSet\Services\WerSvc' 'Start' 'REG_DWORD' '4'
+Set-RegistryValue 'HKLM\zNTUSER\Software\Policies\Microsoft\Windows\Windows Error Reporting' 'Disabled' 'REG_DWORD' '1'
 ## Prevents installation of DevHome and Outlook
 Write-Output "Prevents installation of DevHome and Outlook:"
 Set-RegistryValue 'HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Orchestrator\UScheduler_Oobe\OutlookUpdate' 'workCompleted' 'REG_DWORD' '1'
@@ -394,6 +396,7 @@ Set-RegistryValue 'HKLM\zSOFTWARE\Policies\Microsoft\Edge' 'AIGenThemesEnabled' 
 Set-RegistryValue 'HKLM\zSOFTWARE\Policies\Microsoft\Edge' 'DevToolsGenAiSettings' 'REG_DWORD' '2'
 Set-RegistryValue 'HKLM\zSOFTWARE\Policies\Microsoft\Edge' 'ShareBrowsingHistoryWithCopilotSearchAllowed' 'REG_DWORD' '0'
 Set-RegistryValue 'HKLM\zSOFTWARE\Policies\Microsoft\Windows\Explorer' 'DisableSearchBoxSuggestions' 'REG_DWORD' '1'
+Set-RegistryValue 'HKLM\zSYSTEM\ControlSet001\Services\WSAIFabricSvc' 'Start' 'REG_DWORD' '4'
 Write-Output "Prevents installation of Teams:"
 Set-RegistryValue 'HKLM\zSOFTWARE\Policies\Microsoft\Teams' 'DisableInstallation' 'REG_DWORD' '1'
 Write-Output "Prevent installation of New Outlook":
