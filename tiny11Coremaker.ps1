@@ -406,8 +406,8 @@ Write-Host "Disabling Telemetry:"
 & 'reg' 'add' 'HKLM\zNTUSER\Software\Microsoft\Personalization\Settings' '/v' 'AcceptedPrivacyPolicy' '/t' 'REG_DWORD' '/d' '0' '/f' | Out-Null
 & 'reg' 'add' 'HKLM\zSOFTWARE\Policies\Microsoft\Windows\DataCollection' '/v' 'AllowTelemetry' '/t' 'REG_DWORD' '/d' '0' '/f' | Out-Null
 & 'reg' 'add' 'HKLM\zSYSTEM\ControlSet001\Services\dmwappushservice' '/v' 'Start' '/t' 'REG_DWORD' '/d' '4' '/f' | Out-Null
-& 'reg' 'add' 'HKLM\zSYSTEM\CurrentControlSet\Services\DiagTrack' '/v' 'Start' '/t' 'REG_DWORD' '/d' '4' '/f' | Out-Null
-& 'reg' 'add' 'HKLM\zSYSTEM\CurrentControlSet\Services\WerSvc' '/v' 'Start' '/t' 'REG_DWORD' '/d' '4' '/f' | Out-Null
+& 'reg' 'add' 'HKLM\zSYSTEM\ControlSet001\Services\DiagTrack' '/v' 'Start' '/t' 'REG_DWORD' '/d' '4' '/f' | Out-Null
+& 'reg' 'add' 'HKLM\zSYSTEM\ControlSet001\Services\WerSvc' '/v' 'Start' '/t' 'REG_DWORD' '/d' '4' '/f' | Out-Null
 & 'reg' 'add' 'HKLM\zNTUSER\Software\Policies\Microsoft\Windows\Windows Error Reporting' '/v' 'Disabled' '/t' 'REG_DWORD' '/d' '1' '/f' | Out-Null
 & 'reg' 'add' 'HKLM\zNTUSER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced' '/v' 'Start_TrackProgs' '/t' 'REG_DWORD' '/d' '0' '/f' | Out-Null
 & 'reg' 'add' 'HKLM\zSOFTWARE\Policies\Microsoft\Windows\System' '/v' 'PublishUserActivities' '/t' 'REG_DWORD' '/d' '0' '/f' | Out-Null
